@@ -20,3 +20,7 @@ img {
 .column-one-third {
   width: calc(100% / 3);
 }
+
+.mario {
+  width: 100%;
+}
