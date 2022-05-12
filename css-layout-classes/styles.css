@@ -1,0 +1,34 @@
+.container {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.column-one-fourth {
+  width: calc(100% / 4);
+}
+
+img {
+  width: 100%;
+}
+
+.column-one-third {
+  width: calc(100% / 3);
+}
+
+.mario,
+.donkey-kong {
+  width: 100%;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.column-two-third {
+  width: 66%;
+}
