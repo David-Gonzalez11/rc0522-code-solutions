@@ -9,12 +9,12 @@ body {
   background-color: rgb(255 255 255);
 }
 
-h1 {
+h2 {
   color: rgb(238 114 110);
   font-family: "Brandon Grotesque", sans-serif;
-  font-style: normal;
   font-weight: 500;
   text-align: center;
+  font-size: larger;
 }
 
 input {
@@ -63,7 +63,7 @@ select {
   font-weight: normal;
   padding-left: 4px;
   color: rgb(83 83 83);
-  border-color: rgb(213 215 215);
+  border-color: rgb(166 170 169);
 }
 
 .company {
@@ -79,6 +79,6 @@ select {
 
 .submit-button {
   text-align: right;
-  padding-top: 4px;
+  padding-top: 3px;
   border: none;
 }
