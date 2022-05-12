@@ -10,7 +10,6 @@
 
 .column-one-fourth {
   width: calc(100% / 4);
-  display: flex;
 }
 
 img {
@@ -30,5 +29,5 @@ img {
 }
 
 .column-two-third {
-  width: 75%;
+  width: 66%;
 }
