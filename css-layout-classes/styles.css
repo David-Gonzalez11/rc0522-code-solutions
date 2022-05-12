@@ -24,3 +24,11 @@ img {
 .mario {
   width: 100%;
 }
+
+.column-full {
+  width: 100%;
+}
+
+.column-two-third {
+  width: 75%;
+}
