@@ -20,7 +20,8 @@ img {
   width: calc(100% / 3);
 }
 
-.mario {
+.mario,
+.donkey-kong {
   width: 100%;
 }
 
