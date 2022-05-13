@@ -1,0 +1,81 @@
+.container {
+  width: 1000px;
+  padding-top: 40px;
+  margin: auto;
+  flex-wrap: wrap;
+}
+
+.row {
+  display: flex;
+}
+
+.column-full {
+  text-align: center;
+  font-family:
+    Karla,
+    sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 50px;
+  width: 100%;
+  padding-bottom: 40px;
+  padding-right: 40px;
+}
+
+.column-half {
+  height: 100%;
+  flex-basis: 50%;
+}
+
+.heading {
+  text-align: center;
+  font-family:
+    Karla,
+    sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  width: 100%;
+  font-size: 50px;
+  padding-bottom: 40px;
+}
+
+.button {
+  justify-content: center;
+}
+
+button {
+  border-color: rgb(209 76 69);
+  color: rgb(209 76 69);
+  background-color: white;
+  padding: 5px 20px;
+}
+
+p {
+  line-height: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  font-size: medium;
+}
+
+img {
+  float: left;
+}
+
+p.paragagraphsinline {
+  color: rgb(139 139 139);
+  font-family: Karla, sans-serif;
+  display: inline-block;
+  width: 50%;
+}
+
+p.title {
+  color: rgb(139 139 139);
+  display: inline-block;
+  padding-bottom: 5px;
+  padding-top: 10px;
+  width: 100%;
+  align-content: center;
+  line-height: 2rem;
+  font-size: 23px;
+  font-weight: 100;
+}
