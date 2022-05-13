@@ -1,7 +1,7 @@
 .container {
   width: 1000px;
-  padding-top: 40px;
   margin: auto;
+  padding-top: 40px;
   flex-wrap: wrap;
 }
 
@@ -9,11 +9,20 @@
   display: flex;
 }
 
-.column-full {
+.column-half {
+  background-color: white;
+  height: 100%;
+  flex-basis: 50%;
+}
+
+.column-header {
+  margin-top: 35px;
+  margin-right: 0;
+}
+
+.heading {
   text-align: center;
-  font-family:
-    Karla,
-    sans-serif;
+  font-family: Karla, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 50px;
@@ -22,60 +31,68 @@
   padding-right: 40px;
 }
 
-.column-half {
-  height: 100%;
-  flex-basis: 50%;
-}
-
-.heading {
-  text-align: center;
-  font-family:
-    Karla,
-    sans-serif;
+p,
+h2 {
+  font-family: Karla, sans-serif;
   font-style: normal;
   font-weight: 400;
-  width: 100%;
-  font-size: 50px;
-  padding-bottom: 40px;
+  font-size: medium;
+  line-height: 1.5rem;
+  margin: 10px;
 }
 
 .button {
   justify-content: center;
-}
-
-button {
-  border-color: rgb(209 76 69);
-  color: rgb(209 76 69);
-  background-color: white;
-  padding: 5px 20px;
-}
-
-p {
-  line-height: 1.5rem;
+  align-items: center;
+  margin-top: 30px;
+  font-family: Karla, sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: medium;
+}
+
+.btn {
+  align-content: center;
+  background-color: white;
+  color: rgb(209 76 69);
+  border-color: rgb(209 76 69);
+  padding: 15px;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  border-bottom: 2px solid rgb(209 76 69);
+  border-right: 2px solid rgb(209 76 69);
+}
+
+h2 {
+  font-family: Karla, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: smaller;
+  margin-bottom: 0;
+  width: 60%;
+}
+
+p.paragagraphsinline {
+  color: rgb(139 139 139);
+  font-family: Karla, sans-serif;
+  padding: 0;
+  display: inline-block;
+  width: 60%;
+  margin-left: 0;
 }
 
 img {
   float: left;
 }
 
-p.paragagraphsinline {
-  color: rgb(139 139 139);
-  font-family: Karla, sans-serif;
-  display: inline-block;
-  width: 50%;
-}
-
-p.title {
-  color: rgb(139 139 139);
+.title {
   display: inline-block;
   padding-bottom: 5px;
   padding-top: 10px;
   width: 100%;
   align-content: center;
   line-height: 2rem;
-  font-size: 23px;
-  font-weight: 100;
+}
+
+.maintitle {
+  width: 100%;
 }
