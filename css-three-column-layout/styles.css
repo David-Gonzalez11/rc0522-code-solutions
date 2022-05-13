@@ -60,7 +60,7 @@ p.onboarding {
 }
 
 div.toolsbubble {
-  padding-left: 20%;
+  padding-left: 25%;
 }
 
 .streampara {
@@ -69,7 +69,7 @@ div.toolsbubble {
 }
 
 .qmsimg {
-  padding-left: 20%;
+  padding-left: 25%;
 }
 
 .title {
@@ -97,4 +97,8 @@ div.toolsbubble {
 
 h1.onboarding {
   padding-left: 35px;
+}
+
+.tools {
+  padding-left: 5%;
 }
