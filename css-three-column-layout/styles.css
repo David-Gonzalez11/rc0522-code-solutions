@@ -1,0 +1,104 @@
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+body {
+  background-color: rgb(27 150 217);
+}
+
+img {
+  width: 120px;
+  clip-path: circle();
+  background-color: white;
+  padding: 30px;
+  justify-content: center;
+}
+
+.row {
+  display: flex;
+}
+
+h1 {
+  color: white;
+  font-size: 22px;
+  font-family: Lato, sans-serif;
+  padding: 0;
+  width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  padding-top: 0;
+  margin-bottom: 5%;
+}
+
+p {
+  font-family: Lato, sans-serif;
+  font-style: normal;
+  line-height: 25px;
+  text-align: center;
+  color: rgb(221 221 221);
+  display: block;
+  width: 80%;
+  font-size: medium;
+  margin: 0;
+}
+
+p.onboarding {
+  width: 95%;
+  padding-left: 5px;
+  font-size: medium;
+  font-family:
+    Lato,
+    sans-serif;
+  font-style: normal;
+  line-height: 25px;
+}
+
+.fullcolumn {
+  width: 100%;
+  color: white;
+}
+
+div.toolsbubble {
+  padding-left: 25%;
+}
+
+.streampara {
+  padding-left: 15%;
+  padding-top: 0;
+}
+
+.qmsimg {
+  padding-left: 25%;
+}
+
+.title {
+  font-family: Lato, sans-serif;
+  font-weight: 400;
+  padding-bottom: 2%;
+  width: 100%;
+  font-size: 32px;
+}
+
+.onboarding {
+  padding-left: 10%;
+  padding-top: 0;
+}
+
+.indepthimg {
+  padding-left: 27%;
+}
+
+.columnms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h1.onboarding {
+  padding-left: 35px;
+}
+
+.tools {
+  padding-left: 5%;
+}
