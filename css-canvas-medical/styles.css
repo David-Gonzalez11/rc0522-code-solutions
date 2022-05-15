@@ -1,0 +1,238 @@
+.container {
+  width: 900px;
+  margin: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.nav-bar {
+  color: rgb(160 160 160);
+  display: flex;
+}
+
+button {
+  justify-content: right;
+}
+
+.column-full {
+  width: 100%;
+}
+
+.hero {
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  height: 40%;
+  margin-left: 40px;
+}
+
+.canvas-blue {
+  width: 100px;
+  border-bottom: 1px solid rgb(224 227 227);
+}
+
+.overlay {
+  background: linear-gradient(transparent, rgb(199 182 182 / 63.7%));
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 62.5%;
+}
+
+.overlay-text {
+  align-items: center;
+  width: 26%;
+  color: white;
+  position: absolute;
+  top: 10rem;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 25px;
+  left: 33rem;
+}
+
+h1 {
+  line-height: 40px;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contact-us-btn {
+  padding-left: 6px;
+  margin: 10px;
+  background-color: white;
+  color: darkgrey;
+  border: none;
+  display: inline-block;
+  justify-content: right;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contact-us {
+  background: rgb(41 68 100);
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+.buttons {
+  padding-left: 33%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(232 234 237);
+}
+
+.prefer-canvas {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(116 116 116);
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  background-color: rgb(250 250 250);
+  align-items: center;
+}
+
+h2 {
+  font-family: serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.column-half {
+  width: 50%;
+  height: 130px;
+  background-color: rgb(250 250 250);
+  color: grey;
+  line-height: 25px;
+  padding-left: 15%;
+  padding-bottom: 5%;
+}
+
+p {
+  color: rgb(116 116  116);
+}
+
+.layover-text {
+  color: white;
+}
+
+.physician {
+  display: inline-block;
+  width: 40%;
+  line-height: 35px;
+}
+
+.get-started {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: rgb(41 68 100);
+  color: white;
+  border-radius: 3px;
+}
+
+.column-two-thirds {
+  width: 100%;
+  color: grey;
+  padding-bottom: 5%;
+  padding-left: 50px;
+}
+
+.learn-more-text {
+  margin-left: 0;
+}
+
+.column-one-third {
+  padding-top: 30px;
+  width: 30%;
+}
+
+.columns-one-third-canvas-logo {
+  background-color: rgb(82 83 81);
+  color: white;
+  width: 50%;
+  height: 350px;
+}
+
+.canvas-white {
+  width: 40%;
+  position: relative;
+  top: 5rem;
+  left: 4rem;
+}
+
+.white-canvas-text {
+  position: relative;
+  top: 6rem;
+  left: 4rem;
+}
+
+.white-canvas-text > p {
+  color: white;
+}
+
+.column-two-thirds-canvas-white {
+  background-color: rgb(82 83 81);
+  color: white;
+  width: 30%;
+  padding-left: 5%;
+}
+
+.column-two-thirds-canvas-white > p {
+  color: white;
+}
+
+.tester {
+  position: relative;
+  top: 4rem;
+  left: 3rem;
+  color: white;
+}
+
+.tester > p {
+  color: white;
+}
+
+.column-two-thirdss-canvas-white {
+  background-color: rgb(82 83 81);
+  color: white;
+  width: 30%;
+}
+
+div.terms-and-conditions > p {
+  padding-left: 15px;
+  background-color: rgb(251 251 251);
+  width: 100%;
+  height: 80px;
+}
+
+.footerbtn {
+  background-color: rgb(250 250 250);
+  border: none;
+  color: rgb(149 149 149);
+}
+
+.footer {
+  padding-top: 25px;
+  padding-left: 35px;
+  background-color: rgb(250 250 250);
+  padding-bottom: 5%;
+  width: 100%;
+}
