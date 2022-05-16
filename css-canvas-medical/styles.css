@@ -18,6 +18,9 @@ button {
 
 .column-full {
   width: 100%;
+  padding-left: 10%;
+  border-bottom: 1px solid rgb(238 241 243);
+  margin: auto;
 }
 
 .hero {
@@ -32,30 +35,30 @@ button {
 
 .canvas-blue {
   width: 100px;
-  border-bottom: 1px solid rgb(224 227 227);
 }
 
-.overlay {
-  background: linear-gradient(transparent, rgb(199 182 182 / 63.7%));
+.over {
+  background: linear-gradient(transparent, rgb(15 8 8 / 41.4%));
   position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 62.5%;
+  top: 8rem;
+  left: 19rem;
+  bottom: 20rem;
+  width: 58.5%;
+  height: 57.6%;
 }
 
 .overlay-text {
-  align-items: center;
-  width: 34%;
-  color: white;
   position: absolute;
-  top: 10rem;
-  font-family: Avenir, sans-serif;
+  top: 9rem;
+  left: 18rem;
+  color: white;
+  line-height: 25px;
+  width: 34%;
+  font-family:
+    Avenir,
+    sans-serif;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px;
-  left: 18rem;
   font-size: 16px;
   padding-left: 3%;
 }
@@ -91,7 +94,6 @@ h1 {
   padding-left: 28%;
   padding-top: 15px;
   padding-bottom: 20px;
-  border-bottom: 1px solid rgb(232 234 237);
 }
 
 .prefer-canvas {
