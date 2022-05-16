@@ -121,10 +121,14 @@ h2 {
   width: 50%;
   height: 130px;
   background-color: rgb(250 250 250);
-  color: grey;
-  line-height: 25px;
-  padding-left: 15%;
-  padding-bottom: 5%;
+  line-height: 30px;
+  padding-left: 10%;
+  padding-bottom: 30%;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 4%;
+  color: rgb(110 110 110);
 }
 
 p {
@@ -150,6 +154,7 @@ p {
   background-color: rgb(41 68 100);
   color: white;
   border: none;
+  border-radius: 3px;
 }
 
 .column-two-thirds {
@@ -171,19 +176,22 @@ p {
 .columns-one-third-canvas-logo {
   background-color: rgb(82 83 81);
   color: white;
-  width: 50%;
+  width: 34%;
   height: 350px;
   word-spacing: 2px;
   font-family: Avenir, sans-serif;
   font-style: normal;
   font-weight: 500;
+  line-height: 10px;
+  font-size: smaller;
 }
 
 .canvas-white {
-  width: 40%;
+  width: 30%;
   position: relative;
   top: 5rem;
   left: 4rem;
+  padding-bottom: 16px;
 }
 
 .white-canvas-text {
@@ -199,13 +207,14 @@ p {
 .column-two-thirds-canvas-white {
   background-color: rgb(82 83 81);
   color: white;
-  width: 31%;
+  width: 33%;
   padding-left: 5%;
   font-family:
     Avenir,
     sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: smaller;
 }
 
 .column-two-thirds-canvas-white > p {
@@ -226,12 +235,13 @@ p {
 .column-two-thirdss-canvas-white {
   background-color: rgb(82 83 81);
   color: white;
-  width: 31%;
+  width: 33%;
   font-family:
     Avenir,
     sans-serif;
   font-style: normal;
   font-weight: 500;
+  font-size: smaller;
 }
 
 div.terms-and-conditions > p {
@@ -270,8 +280,22 @@ div.terms-and-conditions > p {
   position: absolute;
   top: 22rem;
   left: 3rem;
-  font-family: "Tiempos Headline", sans-serif;
+  font-family: Avenir, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   font-size: 15px;
+}
+
+.private-meeting {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
