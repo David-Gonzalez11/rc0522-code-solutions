@@ -173,6 +173,10 @@ p {
   color: white;
   width: 50%;
   height: 350px;
+  word-spacing: 2px;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .canvas-white {
@@ -197,6 +201,11 @@ p {
   color: white;
   width: 31%;
   padding-left: 5%;
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 .column-two-thirds-canvas-white > p {
@@ -218,6 +227,11 @@ p {
   background-color: rgb(82 83 81);
   color: white;
   width: 31%;
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
 }
 
 div.terms-and-conditions > p {
