@@ -1,0 +1,62 @@
+.container {
+  width: 1000px;
+  background-color: #f7f8fa;
+  margin: auto;
+  padding-left: 7%;
+  padding-right: 8%;
+}
+
+h1 {
+  text-align: center;
+  font-family: Barlow, sans-serif;
+}
+
+.row {
+  display: flex;
+}
+
+.heading {
+  color: rgb(0 0 0);
+  margin: auto;
+  padding-top: 10px;
+  font-family: Barlow, sans-serif;
+  padding-left: 5%;
+}
+
+.columns {
+  width: 25%;
+}
+
+img {
+  width: 100%;
+  padding-top: 20px;
+}
+
+h3 {
+  color: black;
+  font-size: 16px;
+  padding-top: 0;
+  font-family: Barlow, sans-serif;
+  padding-left: 30%;
+  margin-top: 10px;
+}
+
+.center-images {
+  width: 22%;
+  padding-left: 40%;
+  padding-top: 0;
+}
+
+p {
+  padding-left: 19%;
+  font-family: Barlow, sans-serif;
+  font-size: 13px;
+  padding-top: 12px;
+  padding-bottom: 10px;
+  width: 100%;
+  margin-top: 0;
+}
+
+.toggles {
+  padding-left: 15%;
+}
