@@ -10,7 +10,7 @@ function greet(name) {
   return greeting;
 }
 var greetResult = greet('David');
-console.log('value of greetResulr:', greetResult);
+console.log('value of greetResult:', greetResult);
 
 function getArea(width, height) {
   var area = width * height;
