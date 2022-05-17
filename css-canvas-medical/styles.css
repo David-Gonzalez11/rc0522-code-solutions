@@ -1,0 +1,308 @@
+body {
+  width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.nav-bar {
+  color: rgb(160 160 160);
+  display: flex;
+}
+
+button {
+  justify-content: right;
+}
+
+.column-full {
+  width: 100%;
+  padding-left: 10%;
+  border-bottom: 1px solid rgb(238 241 243);
+  margin: auto;
+}
+
+.hero {
+  padding-top: 50px;
+  position: relative;
+  left: 8%;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
+  padding-right: 15%;
+}
+
+.canvas-blue {
+  width: 100px;
+}
+
+.over {
+  background: linear-gradient(transparent, rgb(15 8 8 / 41.4%));
+  position: absolute;
+  top: 8rem;
+  left: 19rem;
+  bottom: 20rem;
+  width: 58.5%;
+  height: 57.6%;
+}
+
+.emr {
+  font-family: serif;
+}
+
+.overlay-text {
+  position: absolute;
+  top: 9rem;
+  left: 18rem;
+  color: white;
+  line-height: 25px;
+  width: 34%;
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 3%;
+}
+
+h1 {
+  line-height: 40px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contact-us-btn {
+  padding-left: 6px;
+  margin: 10px;
+  background-color: white;
+  color: darkgrey;
+  border: none;
+  display: inline-block;
+  justify-content: right;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.contact-us {
+  background: rgb(41 68 100);
+  padding: 10px;
+  border-radius: 4px;
+  color: white;
+}
+
+.buttons {
+  padding-left: 28%;
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+.prefer-canvas {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: rgb(116 116 116);
+  font-family: serif;
+  font-style: normal;
+  font-weight: normal;
+  background-color: rgb(250 250 250);
+  align-items: center;
+}
+
+h2 {
+  font-family: serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+.column-half {
+  width: 50%;
+  height: 130px;
+  background-color: rgb(250 250 250);
+  line-height: 33px;
+  padding-left: 10%;
+  padding-bottom: 30%;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  padding-top: 4%;
+  color: rgb(110 110 110);
+}
+
+p {
+  color: rgb(116 116  116);
+}
+
+.layover-text {
+  color: white;
+}
+
+.physician {
+  display: block;
+  width: 100%;
+  line-height: 35px;
+  text-align: center;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+.get-started {
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  background-color: rgb(41 68 100);
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+.column-four-fifths {
+  width: 80%;
+  color: grey;
+  padding-bottom: 3%;
+  padding-left: 50px;
+}
+
+.learn-more-text {
+  margin-left: 0;
+}
+
+.column-one-fifth {
+  padding-top: 30px;
+  width: 20%;
+}
+
+.columns-one-third-canvas-logo {
+  background-color: rgb(82 83 81);
+  color: white;
+  width: 34%;
+  height: 350px;
+  word-spacing: 2px;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 10px;
+  font-size: smaller;
+}
+
+.canvas-white {
+  width: 30%;
+  position: relative;
+  top: 5rem;
+  left: 4rem;
+  padding-bottom: 16px;
+}
+
+.white-canvas-text {
+  position: relative;
+  top: 6rem;
+  left: 4rem;
+}
+
+.white-canvas-text > p {
+  color: white;
+}
+
+.column-two-thirds-canvas-white {
+  background-color: rgb(82 83 81);
+  color: white;
+  width: 33%;
+  padding-left: 5%;
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: smaller;
+}
+
+.column-two-thirds-canvas-white > p {
+  color: white;
+}
+
+.tester {
+  position: relative;
+  top: 4rem;
+  left: 3rem;
+  color: white;
+}
+
+.tester > p {
+  color: white;
+}
+
+.column-two-thirdss-canvas-white {
+  background-color: rgb(82 83 81);
+  color: white;
+  width: 33%;
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: smaller;
+}
+
+div.terms-and-conditions > p {
+  padding-left: 15px;
+  background-color: rgb(251 251 251);
+  width: 100%;
+  height: 80px;
+}
+
+.footerbtn {
+  background-color: rgb(250 250 250);
+  border: none;
+  color: rgb(149 149 149);
+}
+
+.footer {
+  padding-top: 25px;
+  padding-left: 35px;
+  background-color: rgb(250 250 250);
+  padding-bottom: 5%;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.herobutton {
+  background-color: rgb(41 68 99);
+  color: rgb(226 226 226);
+  padding-right: 45px;
+  padding-bottom: 35px;
+  padding-left: 45px;
+  /* stylelint-disable-next-line declaration-block-no-redundant-longhand-properties */
+  padding-top: 12px;
+  border-radius: 3px;
+  height: 7px;
+  border: none;
+  position: absolute;
+  top: 22rem;
+  left: 3rem;
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.private-meeting {
+  font-family: Avenir, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
+
+h3 {
+  font-family:
+    Avenir,
+    sans-serif;
+  font-style: normal;
+  font-weight: 500;
+}
