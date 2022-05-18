@@ -1,0 +1,52 @@
+.container {
+  width: 1000px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+h5 {
+  text-align: center;
+  width: 100%;
+  font-family: sans-serif;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.column-one-fourth {
+  width: 25%;
+  padding-left: 1%;
+}
+
+img {
+  width: 100%;
+}
+
+span {
+  color: rgb(215 215 215);
+  font-size: xx-small;
+  font-weight: 400;
+}
+
+h6 {
+  font-family: sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+span.new-price {
+  color: black;
+  background-color: rgb(254 242 231);
+}
+
+img.louis {
+  padding-top: 18%;
+}
+
+del {
+  font-weight: 400;
+  font-family: sans-serif;
+  font-size: 8px;
+}
