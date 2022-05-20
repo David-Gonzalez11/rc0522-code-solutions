@@ -3,7 +3,7 @@
 create an array and set it equal to an empty object literal
 iterate over the keys in source
 if keys included key and source at key is not equal to undefined
-assign the variable we created(newObj) at key to the sourc object at key
+assign the variable we created(newObj) at key to the source object at key
 return the newObj
 
 */
