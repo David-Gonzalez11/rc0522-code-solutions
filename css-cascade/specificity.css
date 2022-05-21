@@ -1,0 +1,19 @@
+#timbl {
+  color: red;
+}
+
+.nio {
+  color: green;
+}
+
+p {
+  color: orange;
+}
+
+* {
+  color: blue;
+}
+
+#verou {
+  color: black !important;
+}
