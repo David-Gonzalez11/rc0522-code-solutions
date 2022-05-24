@@ -1,9 +1,9 @@
 /* exported titleCase */
 // first create a new variable and set it equal to the title and use the lowerCase method and the split method to make the string lowercase and split the string into an array of indivisual words
 // create another varibale to store all the minor words that should be lowercases if they are less than three letters
-//
-//
-//
+// create a for loop that iterates over the words variable at every index
+// if the word at index i is equal to a dash then create another variable to split the words within the dash
+// iterate over the splitHyphen variable son that we can make each character at index 0 uppercase and replace it
 //
 //
 //
@@ -30,6 +30,7 @@ function titleCase(title) {
       words[i] = 'JavaScript:';
     } else if (words[i] === 'javascript') {
       words[i] = 'JavaScript';
+
     } else if (words[i].length >= 4) {
       words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
     } else if (i === 0) {
