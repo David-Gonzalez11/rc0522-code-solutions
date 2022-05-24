@@ -1,0 +1,41 @@
+.container {
+  margin-top: 25%;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  white-space: pre;
+  font-size: 50px;
+  font-family:
+    Roboto,
+    sans-serif;
+  padding-left: 0.1%;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.correct-char {
+  color: rgb(71 209 49);
+}
+
+.incorrect-char {
+  color: red;
+}
+
+/* .underline {
+  text-decoration: underline;
+  text-underline-position: auto;
+} */
+
+.border-bottom {
+  padding-bottom: 1px;
+  border-bottom: 4px solid black;
+}
+
+.border-bottom-red {
+  border-bottom: 4px solid red;
+}
