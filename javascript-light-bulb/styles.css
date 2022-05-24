@@ -1,0 +1,25 @@
+.firstdiv {
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgb(250 234 132);
+  margin-top: 20%;
+  margin-left: 40%;
+  width: 100px;
+  height: 100px;
+  padding: 5%;
+  box-shadow: 1px 1px 5px 5px rgb(250 234 132);
+}
+
+.off {
+  background-color: rgb(37 37 37);
+  box-shadow: none;
+}
+
+body.back {
+  background-color: black;
+}
+
+body {
+  background-color: rgb(253 249 241);
+}
