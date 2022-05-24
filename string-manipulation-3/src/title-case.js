@@ -1,4 +1,16 @@
 /* exported titleCase */
+// first create a new variable and set it equal to the title and use the lowerCase method and the split method to make the string lowercase and split the string into an array of indivisual words
+// create another varibale to store all the minor words that should be lowercases if they are less than three letters
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 function titleCase(title) {
   var words = title.toLowerCase().split(' ');
   var minor = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
