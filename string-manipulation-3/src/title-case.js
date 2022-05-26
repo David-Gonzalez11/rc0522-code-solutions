@@ -3,14 +3,23 @@
 // create another varibale to store all the minor words that should be lowercases if they are less than three letters
 // create a for loop that iterates over the words variable at every index
 // if the word at index i is equal to a dash then create another variable to split the words within the dash
-// iterate over the splitHyphen variable son that we can make each character at index 0 uppercase and replace it
-//
-//
-//
-//
-//
-//
-//
+// iterate over the splitHyphen variable so that we can make each character at index 0 uppercase and replace it as the first letter
+// create a new variable for hyphen and set it equal to the splitHyphen variable to join the dashed word again with a dash
+// set the word at index i equal to variable hyphen
+// check if wordsa at index is equal to lower case 'api' and if it is then make it equal to 'API'
+// check if words at index is equal to 'javascript:' if it is then replace it with 'JavaScript:'
+// check if words at index is equal to 'javascript' if it is then replace it with 'JavaScript'
+// check if words at index i is greater than or equal to 4
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+// check if words at index i is strictly equal to 0
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+
+// check if minorwords at indexOf words at i is strictly equal to -1
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+
+// check to see if words at index i -1 includes a colon
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+
 function titleCase(title) {
   var words = title.toLowerCase().split(' ');
   var minor = ['and', 'or', 'nor', 'but', 'a', 'an', 'the', 'as', 'at', 'by', 'for', 'in', 'of', 'on', 'per', 'to'];
