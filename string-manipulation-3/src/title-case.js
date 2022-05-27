@@ -10,13 +10,13 @@
 // check if words at index is equal to 'javascript:' if it is then replace it with 'JavaScript:'
 // check if words at index is equal to 'javascript' if it is then replace it with 'JavaScript'
 // check if words at index i is greater than or equal to 4
-// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and start at 1 to continue the word all lowerCase
 // check if words at index i is strictly equal to 0
-// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and start at 1 to continue the word all lowerCase
 // check if minorwords at indexOf words at i is strictly equal to -1
-// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and start at 1 to continue the word all lowerCase
 // check to see if words at index i -1 includes a colon
-// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and delte 1 to replace with upperCase letter
+// if it is then words at index i is equal to words at index i (call the charAt method) to make the first letter uppercase and slice and start at 1 to continue the word all lowerCase
 
 function titleCase(title) {
   var words = title.toLowerCase().split(' ');
