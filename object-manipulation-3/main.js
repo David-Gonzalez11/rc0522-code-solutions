@@ -41,11 +41,13 @@ console.log('deal to playrs', dealToPlayers());
 
 function findScore(players) {
   for (var s = 0; s < players; s++) {
-    if (players[0][s].hand.rank === 'J' || players.hand === 'Q' || players.hand === 'K') {
-      players.score.rank += 10;
+    for (var j = 0; j < players[s].hand.length; j++) {
+      if (players[s].hand[j] === 'J' || players[s].hand[j] === 'Q' || players[s].hand[j] === 'K') {
+        players[s].score += 10;
 
-    } else if (players.hand === 'A') {
-      players.score.rank += 11;
+      } else if (players.hand === 'A') {
+        players[s].score += 11;
+      }
     }
   }
 }
