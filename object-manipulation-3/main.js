@@ -22,16 +22,31 @@ function createDeck(players) {
   }
   return deck;
 }
+var shuffledDeck = _.shuffle(deck);
 
-function shuffleDeck(deck) {
-  for (var x = 0; x < deck.length; x++) {
-    var random = Math.random(Math.random() * (x - 1));
-    var temp = deck[random];
-    deck[random] = deck[x];
-    deck[x] = temp;
+function dealHand(player) {
+  for (var i = 0; i < 2; i++) {
+    player.hand.push(shuffledDeck[i]);
+    shuffledDeck.splice(0, 1);
   }
-  return deck;
 }
 
-var gameDeck = createDeck();
-console.log(gameDeck);
+function dealToPlayers(deal) {
+  for (var i = 0; i < players.length; i++) {
+    dealHand(players[i]);
+  }
+  return players;
+}
+console.log('deal to playrs', dealToPlayers());
+
+function findScore(players) {
+  for (var s = 0; s < players; s++) {
+    if (players[0][s].hand.rank === 'J' || players.hand === 'Q' || players.hand === 'K') {
+      players.score.rank += 10;
+
+    } else if (players.hand === 'A') {
+      players.score.rank += 11;
+    }
+  }
+}
+console.log(findScore());
