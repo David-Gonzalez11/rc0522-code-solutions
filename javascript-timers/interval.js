@@ -10,4 +10,4 @@ function counter() {
     clearInterval(countDown);
   }
 }
-setInterval(counter, 1000);
+countDown = setInterval(counter, 1000);
