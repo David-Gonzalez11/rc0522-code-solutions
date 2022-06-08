@@ -6,26 +6,27 @@ var players = [
   { name: 'Isabel', hand: [], score: 0 }
 ];
 
-var suit = ['clubs', 'diamonds', 'hearts', 'spades'];
-var rank = ['Ace', 2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Queen', 'King'];
-var deck = [];
+var cardSuit = ['clubs', 'diamonds', 'hearts', 'spades'];
+var cardRank = [2, 3, 4, 5, 6, 7, 8, 9, 10, 'Jack', 'Ace', 'Queen', 'King'];
+var cardDeck = [];
 
 function createDeck(players) {
   var card = {};
-  for (var s = 0; s < suit.length; s++) {
-    for (var r = 0; r < rank.length; r++) {
-      suit[s] = card.suit;
-      rank[r] = card.rank;
-      deck.push(card);
+  for (var s = 0; s < cardSuit.length; s++) {
+    for (var r = 0; r < cardRank.length; r++) {
+      card.suit = cardSuit[s];
+      card.rank = cardRank[r];
+      console.log('value of rank', cardRank[r]);
+      cardDeck.push(card);
       card = {};
     }
   }
-  return deck;
 }
-var shuffledDeck = _.shuffle(deck);
+createDeck();
+var shuffledDeck = _.shuffle(cardDeck);
 
 function dealHand(player) {
-  for (var i = 0; i < 2; i++) {
+  for (var i = 0; i <= 2; i++) {
     player.hand.push(shuffledDeck[i]);
     shuffledDeck.splice(0, 1);
   }
@@ -37,18 +38,41 @@ function dealToPlayers(deal) {
   }
   return players;
 }
-console.log('deal to playrs', dealToPlayers());
+console.log('deal to players', dealToPlayers());
 
-function findScore(players) {
-  for (var s = 0; s < players; s++) {
+function findScore(toPlayers) {
+  dealToPlayers(players);
+  var points = 0;
+  for (var s = 0; s < players.length; s++) {
     for (var j = 0; j < players[s].hand.length; j++) {
-      if (players[s].hand[j] === 'J' || players[s].hand[j] === 'Q' || players[s].hand[j] === 'K') {
-        players[s].score += 10;
+      if (players[s].hand[j].rank === 'Queen' || players[s].hand[j].rank === 'Jack' || players[s].hand[j].rank === 'King') {
+        points += 10;
 
-      } else if (players.hand === 'A') {
-        players[s].score += 11;
+      } else if (players[s].hand[j].rank === 'Ace') {
+        points += 11;
+      } else {
+        players[s].hand[j].rank += points;
+
       }
     }
+    players[s].score = points;
   }
+  return players;
 }
-console.log(findScore());
+console.log('find score', findScore());
+
+function winner(toPlayers) {
+  findScore(toPlayers);
+  var winner = {};
+  winner.name = players[0].name;
+  winner.score = players[0].score;
+  for (var i = 0; i < players.length; i++) {
+    if (toPlayers[i].score > winner.score) {
+      winner.name = toPlayers[i].name;
+      winner.score = toPlayers[i].score;
+    }
+  }
+  console.log(players);
+  console.log('The Winner of the card game is ' + winner.name + ' with an amazing score of ' + winner.score);
+}
+winner(players);
