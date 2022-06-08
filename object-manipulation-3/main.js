@@ -16,7 +16,6 @@ function createDeck(players) {
     for (var r = 0; r < cardRank.length; r++) {
       card.suit = cardSuit[s];
       card.rank = cardRank[r];
-      console.log('value of rank', cardRank[r]);
       cardDeck.push(card);
       card = {};
     }
@@ -26,7 +25,7 @@ createDeck();
 var shuffledDeck = _.shuffle(cardDeck);
 
 function dealHand(player) {
-  for (var i = 0; i <= 2; i++) {
+  for (var i = 0; i < 2; i++) {
     player.hand.push(shuffledDeck[i]);
     shuffledDeck.splice(0, 1);
   }
@@ -39,9 +38,7 @@ function dealToPlayers(deal) {
   return players;
 }
 console.log('deal to players', dealToPlayers());
-
 function findScore(toPlayers) {
-  dealToPlayers(players);
   var points = 0;
   for (var s = 0; s < players.length; s++) {
     for (var j = 0; j < players[s].hand.length; j++) {
@@ -61,18 +58,18 @@ function findScore(toPlayers) {
 }
 console.log('find score', findScore());
 
-function winner(toPlayers) {
-  findScore(toPlayers);
+function winner(Players) {
+  findScore(Players);
   var winner = {};
   winner.name = players[0].name;
   winner.score = players[0].score;
   for (var i = 0; i < players.length; i++) {
-    if (toPlayers[i].score > winner.score) {
-      winner.name = toPlayers[i].name;
-      winner.score = toPlayers[i].score;
+    if (Players[i].score > winner.score) {
+      winner.name = Players[i].name;
+      winner.score = Players[i].score;
     }
   }
-  console.log(players);
+  console.log('value of players', players);
   console.log('The Winner of the card game is ' + winner.name + ' with an amazing score of ' + winner.score);
 }
 winner(players);
