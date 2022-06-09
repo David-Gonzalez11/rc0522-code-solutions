@@ -59,7 +59,7 @@ function findScore(toPlayers) {
 console.log('find score', findScore());
 
 function winner(Players) {
-  findScore(Players);
+  findScore();
   var winner = {};
   winner.name = players[0].name;
   winner.score = players[0].score;
