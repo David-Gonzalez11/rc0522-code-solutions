@@ -21,6 +21,11 @@ app.get('/api/notes/:id', (req, res) => {
     } else {
       res.status(200).json(data.notes[id]);
     }
+  } else {
+    if (!Number.isInteger(id) || id < 0) {
+      res.status(400).json({ error: 'Id must be a positive integer' });
+
+    }
   }
 });
 
