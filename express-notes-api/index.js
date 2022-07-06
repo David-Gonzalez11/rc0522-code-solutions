@@ -14,15 +14,13 @@ app.get('/api/notes', (req, res) => {
   res.json(newArr);
 });
 app.get('/api/notes/:id', (req, res) => {
-  const id = Number(req.params.id);
+  const id = Number.isInteger(req.params.id);
   if (id > 0) {
     if (!data.notes[id]) {
       res.status(404).send({ error: `cannot find note with id ${id}` });
     } else {
       res.status(200).json(data.notes[id]);
     }
-  } else if (id < 0) {
-    res.status(400).json({ error: 'id must be a positive integer' });
   }
 });
 
@@ -30,7 +28,7 @@ app.post('/api/notes', (req, res) => {
   if (req.body.content === undefined) {
     res.status(400).json({ error: 'content is a required field' });
 
-  } else if (req.body.content !== undefined) {
+  } else {
     const note = req.body;
     const id = data.nextId;
     note.id = id;
@@ -40,9 +38,8 @@ app.post('/api/notes', (req, res) => {
 
     fs.writeFile('data.json', dataNote, err => {
       if (err) {
-        res.status(500).json({ error: 'An unexpected error occured' });
         console.error(err);
-
+        res.status(500).json({ error: 'An unexpected error occured' });
       } else {
         res.status(201).json(note);
       }
@@ -61,14 +58,15 @@ app.delete('/api/notes/:id', (req, res) => {
       const stringData = JSON.stringify(data, null, 2);
       fs.writeFile('data.json', stringData, err => {
         if (err) {
-          res.status(500).json({ error: 'content is a required field' });
           console.error(err);
+          res.status(500).json({ error: 'content is a required field' });
+
         } else {
           res.sendStatus(204);
         }
       });
     }
-  } else if (id < 0) {
+  } else {
     res.status(400).json({ error: 'id must be a positive integer' });
   }
 });
@@ -79,7 +77,7 @@ app.put('/api/notes/:id', (req, res) => {
     res.status(400).json({ error: 'id must be a positive integer' });
   } else if (req.body.content === undefined) {
     res.status(400).json({ error: 'content is a required field' });
-  } else if (id > 0) {
+  } else {
     if (!data.notes[id]) {
       res.status(404).send({ error: `cannot find note with id ${id}` }
       );
@@ -90,8 +88,8 @@ app.put('/api/notes/:id', (req, res) => {
       const dataString = JSON.stringify(data, null, 2);
       fs.writeFile('data.json', dataString, err => {
         if (err) {
-          res.status(500).json({ error: 'An unexpected error occured' });
           console.error(err);
+          res.status(500).json({ error: 'An unexpected error occured' });
         } else {
           res.status(200).json(newNote);
         }
