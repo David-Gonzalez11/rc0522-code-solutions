@@ -21,31 +21,33 @@ app.get('/api/grades', (req, res, next) => {
     res.json(grades);
   }).catch(err => {
     console.error(err);
-    res.status(500).json({ error: 'An unexpected error occured' });
+    res.status(500).json({ error: 'an unexpected error occured' });
   });
 });
 
-app.post('/api/grades/', (req, res) => {
-  const name = req.body;
-  const course = req.body;
-  const score = req.body;
-  const text = `insert into "grades"("name","course","score")
-  values($1, $2, $3) returning *;
-  `;
+app.post('/api/grades/', (req, res, next) => {
+  const { name, course, score } = req.body;
+  const text = 'INSERT INTO "grades"("name", "course", "score") VALUES($1, $2, $3) RETURNING *';
   const values = [name, course, score];
   if (name === undefined || course === undefined || parseInt(score) < 0 || parseInt(score) > 100) {
-    res.status(400).json({ error: 'Invalid field submitted' });
-  } else {
-    db.query(text, values).then(result => {
-      res.status(201).json(result.rows[0]);
-    }).catch(err => {
-      console.error(err);
-      res.status(500).json({ error: 'An unexpected error occured' });
+    res.status(400).json({
+      error: 'Invalid field submitted'
     });
+  } else {
+    db.query(text, values)
+      .then(result => {
+        res.status(201).json(result.rows[0]);
+      })
+      .catch(err => {
+        console.error(err);
+        res.status(500).json({
+          error: 'An unexpected error occured.'
+        });
+      });
   }
 });
 
-app.put('/api/grades/:gradeId', (req, res, next) => {
+app.put('/api/grades/:gradeId', (req, res) => {
   const gradeId = Number(req.params.gradeId);
   if (!Number.isInteger(gradeId) || gradeId <= 0) {
     res.status(400).json({
@@ -56,32 +58,28 @@ app.put('/api/grades/:gradeId', (req, res, next) => {
   const name = req.body;
   const course = req.body;
   const score = req.body;
-  const text = 'update "grades" set "name"=$1, "course"=$2, "score"=$3 where "gradeId"=$4 returning*';
+  const text = `update  "grades" set "name"=$1, "course"=$2 ,"score"=$3 where "gradeId"=$4 returning *;
+  `;
   const values = [name, course, score, gradeId];
   if (name === undefined || course === undefined || parseInt(score) < 0 || parseInt(score) > 100) {
-    res.status(400).json({
-      error: 'Invalid field submitted'
-    });
+    res.status(400).json({ error: 'Invalid field submitted' });
   } else {
-    db.query(text, values)
-      .then(result => {
-        const grade = result.rows[0];
-        if (!grade) {
-          res.status(404).json({
-            error: `Cannot find grade with gradeId ${gradeId}`
-          });
-        } else {
-          res.status(200).json(result.rows[0]);
-        }
-      })
-      .catch(err => {
-        console.error(err);
-        res.status(500).json({
-          error: 'An unexpected error occured'
-        });
-      });
+    db.query(text, values).then(result => {
+      const grade = result.rows;
+      if (!grade) {
+        res.status(404).json({ error: 'cannot find grade with that Id' });
+
+      } else {
+        res.status(200).json(result.rows[0]);
+      }
+    }).catch(err => {
+      console.error(err);
+      res.status(500).json({ error: 'An unexpected error occured' });
+    });
+
   }
 });
+
 app.delete('/api/grades/:gradeId', (req, res, next) => {
   const gradeId = Number(req.params.gradeId);
   if (!Number.isInteger(gradeId) || gradeId <= 0) {
@@ -90,7 +88,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
     });
     return;
   }
-  const text = 'delete from "grades" where "gradeId"=$1 returning *';
+  const text = 'delete from "grades" where "gradeId"= $1 returning *';
   const values = [gradeId];
   db.query(text, values)
     .then(result => {
@@ -106,10 +104,11 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
     .catch(err => {
       console.error(err);
       res.status(500).json({
-        error: 'An unexpected error occured'
+        error: 'An unexpected error occured.'
       });
     });
 });
 
 app.listen(3000, () => {
+  console.log('listening on port 3000');
 });
