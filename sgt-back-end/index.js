@@ -21,7 +21,7 @@ app.get('/api/grades', (req, res, next) => {
     res.json(grades);
   }).catch(err => {
     console.error(err);
-    res.status(500).json({ error: 'an unexpected error occured' });
+    res.status(500).json({ error: 'An unexpected error occured' });
   });
 });
 
