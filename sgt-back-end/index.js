@@ -26,7 +26,9 @@ app.get('/api/grades', (req, res, next) => {
 });
 
 app.post('/api/grades/', (req, res, next) => {
-  const { name, course, score } = req.body;
+  const name = req.body;
+  const course = req.body;
+  const score = req.body;
   const text = 'INSERT INTO "grades"("name", "course", "score") VALUES($1, $2, $3) RETURNING *';
   const values = [name, course, score];
   if (name === undefined || course === undefined || parseInt(score) < 0 || parseInt(score) > 100) {
@@ -41,7 +43,7 @@ app.post('/api/grades/', (req, res, next) => {
       .catch(err => {
         console.error(err);
         res.status(500).json({
-          error: 'An unexpected error occured.'
+          error: 'An unexpected error occured'
         });
       });
   }
@@ -104,7 +106,7 @@ app.delete('/api/grades/:gradeId', (req, res, next) => {
     .catch(err => {
       console.error(err);
       res.status(500).json({
-        error: 'An unexpected error occured.'
+        error: 'An unexpected error occured'
       });
     });
 });
