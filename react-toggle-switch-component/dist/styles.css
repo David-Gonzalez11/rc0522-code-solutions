@@ -1,0 +1,45 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.on {
+  background-color: rgb(106 168 79);
+  height: 25px;
+  width: 50px;
+  margin: 1rem;
+  border: solid 0.2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.off {
+  background-color: rgb(226 226 226);
+  height: 25px;
+  width: 50px;
+  margin: 1rem;
+  border: solid 0.2rem;
+  border-radius: 5rem;
+  cursor: pointer;
+}
+
+.toggle-on {
+  border: solid black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  float: right;
+  cursor: pointer;
+}
+
+.toggle-off {
+  border: solid black;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  float: left;
+  cursor: pointer;
+}
