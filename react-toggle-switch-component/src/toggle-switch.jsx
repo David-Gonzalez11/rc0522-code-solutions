@@ -14,27 +14,20 @@ class ToggleSwitch extends React.Component {
   }
 
   render() {
+    let status = 'off';
+
     if (this.state.isToggled) {
-      return (
-        <div className="row">
-          <div className="on" onClick={this.handleClick}>
-            <button className="toggle-on">
-            </button>
-          </div>
-          <div>ON</div>
-        </div>
-      );
-    } else if (!this.state.isToggled) {
-      return (
-        <div className="row">
-          <div className="off" onClick={this.handleClick}>
-            <button className="toggle-off">
-            </button>
-          </div>
-          <div>OFF</div>
-        </div>
-      );
+      status = 'on';
     }
+
+    return (
+  <div className="row">
+    <div className={status} onClick={this.handleClick}>
+      <button className={`toggle-${status}`}></button>
+    </div>
+    <div>{status.toUpperCase()}</div>
+  </div>
+    );
   }
 }
 export default ToggleSwitch;
