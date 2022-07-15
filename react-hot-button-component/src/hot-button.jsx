@@ -13,19 +13,23 @@ class HotButton extends React.Component {
   }
 
   render() {
+    let btnClass = '';
+
     if (this.state.count <= 3) {
-      return <button onClick={this.handleClick} className="hot-button btn3">Hot Button!</button>;
+      btnClass = 'btn3';
     } else if (this.state.count <= 6) {
-      return <button onClick={this.handleClick} className="hot-button btn6">Hot-button!</button>;
+      btnClass = 'btn6';
     } else if (this.state.count <= 9) {
-      return <button onClick={this.handleClick} className="hot-button btn9">Hot-button!</button>;
+      btnClass = 'btn9';
     } else if (this.state.count <= 12) {
-      return <button onClick={this.handleClick} className="hot-button btn12">Hot-button!</button>;
+      btnClass = 'btn12';
     } else if (this.state.count <= 15) {
-      return <button onClick={this.handleClick} className="hot-button btn15">Hot-button!</button>;
+      btnClass = 'btn15';
     } else if (this.state.count >= 16) {
-      return <button onClick={this.handleClick} className="hot-button btn18">Hot-button!</button>;
+      btnClass = 'btn18';
     }
+
+    return <button onClick={this.handleClick} className={`hot-button ${btnClass}`}>Hot-button!</button>;
   }
 }
 export default HotButton;
