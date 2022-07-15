@@ -5,7 +5,7 @@
 }
 
 .on {
-  background-color: #6aa84f;
+  background-color: rgb(106 168 79);
   height: 25px;
   width: 50px;
   margin: 1rem;
@@ -15,7 +15,7 @@
 }
 
 .off {
-  background-color: #e2e2e2;
+  background-color: white;
   height: 25px;
   width: 50px;
   margin: 1rem;
@@ -25,21 +25,21 @@
 }
 
 .toggle-on {
-  border: solid #000;
+  border: solid black;
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: #fff;
+  background-color: white;
   float: right;
   cursor: pointer;
 }
 
 .toggle-off {
-  border: solid #000;
+  border: solid black;
   border-radius: 50%;
   height: 25px;
   width: 25px;
-  background-color: #fff;
+  background-color: white;
   float: left;
   cursor: pointer;
 }
