@@ -1,0 +1,28 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.circle {
+  height: 200px;
+  width: 200px;
+  border: solid 0.25rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.count {
+  font-size: 2rem;
+}
+
+.button {
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.margin {
+  margin: 2rem;
+}
