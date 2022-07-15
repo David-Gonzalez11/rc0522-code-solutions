@@ -1,0 +1,42 @@
+button {
+  border: solid 1px grey;
+  border-radius: 0.2rem;
+  width: 8rem;
+  height: 3rem;
+  box-shadow: rgb(0 0 0 / 35%) 0 5px 18px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn3 {
+  background-color: rgb(53 28 117);
+  color: white;
+}
+
+.btn6 {
+  background-color: rgb(103 78 167);
+  color: white;
+}
+
+.btn9 {
+  background-color: rgb(224 102 102);
+  color: white;
+}
+
+.btn12 {
+  background-color: rgb(246 178 107);
+  color: black;
+}
+
+.btn15 {
+  background-color: rgb(231 231 73);
+  color: black;
+}
+
+.btn18 {
+  background-color: rgb(255 255 255);
+  color: black;
+  border-color: black;
+}
