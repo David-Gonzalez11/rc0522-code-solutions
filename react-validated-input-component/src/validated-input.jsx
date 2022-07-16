@@ -15,17 +15,18 @@ class ValidatedInput extends React.Component {
   }
 
   render() {
-    const requiredField = this.state.password ? 'hidden' : '';
-    const lessthan8 = (this.state.password && this.state.password.length < 8) ? '' : 'hidden';
-    const passes = this.state.password.length < 8 ? 'fas fa-times' : 'fas fa-check';
+    const checkIfPassword = (this.state.password ? 'hidden' : '');
+    const checkLess8 = (this.state.password && this.state.password < 8 ? '' : 'hidden');
+    const checkIfValid = (this.state.password && this.state.password > 8 ? 'fas fa-times' : 'fas fa-check');
+
     return (
       <div className="row">
         <form>
           <label htmlFor="checked">Password</label>
           <input type="password" name="password" id="checked" onChange={this.handleChange} />
-          <i className={`${passes}`}></i>
-          <p className={`message ${requiredField}`}>A password is required</p>
-          <p className={`message ${lessthan8}`}>Your password is too short</p>
+          <i className={`${checkIfValid}`}></i>
+          <p className={`message ${checkIfPassword}`}>A password is required</p>
+          <p className={`message ${checkLess8}`}>Your password is too short</p>
         </form>
       </div>
     );
