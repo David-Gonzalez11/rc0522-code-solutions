@@ -1,11 +1,3 @@
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-}
-
 h5,
 p {
   margin: 0;
@@ -16,13 +8,13 @@ button,
 li {
   list-style-type: none;
   width: 60%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: sans-serif;
 }
 
 .header {
   border: solid darkgray 1px;
   background-color: lightgrey;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .detail {

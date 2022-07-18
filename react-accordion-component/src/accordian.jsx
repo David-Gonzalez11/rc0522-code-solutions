@@ -1,45 +1,41 @@
 import React from 'react';
 
-class Accordian extends React.Component {
+export default class Accordian extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      itemViewed: null
+      itemClicked: null
     };
     this.handleClick = this.handleClick.bind(this);
   }
 
   handleClick(event) {
-    const key = event.target.id;
-    if (event.target.tagName === 'H5') {
-      if (this.state.itemViewed === key) {
-        this.setState({
-          itemViewed: null
-        });
-      } else {
-        this.setState({
-          itemViewed: key
-        });
-      }
+    const id = event.target.id;
+    if (this.state.itemClicked === id) {
+      this.setState({
+        itemClicked: null
+      });
+    } else {
+      this.setState({
+        itemClicked: id
+      });
 
     }
-
   }
 
   render() {
-    const topics = this.props.topics;
-    const listTopics = topics.map(topic =>
-      <li key={topic.topic}>
-        <h5 onClick={this.handleClick} id={topic.topic} className="header">{topic.topic}</h5>
-        <p className={this.state.itemViewed === topic.topic ? 'detail' : 'detail hidden'}>{topic.detail}</p>
+    const topics = this.props.language;
+
+    const accordionTopics = topics.map(topic =>
+   <li key={topic.id}>
+    <h5 onClick={this.handleClick} id={topic.language} className="header">{topic.language}</h5>
+     <p className={this.state.itemClicked === topic.language ? 'detail' : 'detail hidden'}>{topic.detail}</p>
       </li>
     );
     return (
         <ul>
-          {listTopics}
+          {accordionTopics}
         </ul>
     );
   }
 }
-
-export default Accordian;
