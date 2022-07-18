@@ -4,12 +4,12 @@ import App from './accordian';
 const topics = [
   {
     id: 0,
-    language: 'HTML',
+    language: 'Hypertext Markup Language',
     detail: 'The HyperText Markup Language or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets and scripting languages such as JavaScript.'
   },
   {
     id: 1,
-    language: 'CSS',
+    language: 'Cascading Style Sheets',
     detail: 'Cascading Style Sheets is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.'
   },
   {
