@@ -1,0 +1,26 @@
+h5,
+p {
+  margin: 0;
+  padding: 10px;
+}
+
+button,
+li {
+  list-style-type: none;
+  width: 60%;
+  font-family: sans-serif;
+}
+
+.header {
+  border: solid darkgray 1px;
+  background-color: lightgrey;
+  font-size: 1rem;
+}
+
+.detail {
+  border: solid lightgrey 1px;
+}
+
+.hidden {
+  display: none;
+}
