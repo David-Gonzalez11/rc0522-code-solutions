@@ -1,36 +1,40 @@
 import React from 'react';
-
-export default class AppDrawer extends React.Component {
+export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       isToggled: false
     };
-    this.handleClick = this.handleClick.bind(this);
+    this.handleNavBar = this.handleNavBar.bind(this);
+    this.handleHide = this.handleHide.bind(this);
   }
 
-  handleClick() {
-    this.setState({
-      isToggled: !this.state.isToggled
-    });
+  handleNavBar() {
+    this.setState(prevState => ({
+      isToggled: !prevState.isToggled
+    }));
+  }
+
+  handleHide() {
+    if (this.state.isToggled === true) {
+      return '';
+    } else {
+      return 'hidden';
+    }
   }
 
   render() {
-    const news = this.state.isToggled ? 'drawer open' : 'drawer';
-
     return (
-      <div>
-        <i className="fa-solid fa-bars fa-2x" onClick={this.handleClick}></i>
-        <div onClick={this.handleClick} className={news}>
-          <div className="content">
-            <h1 onClick={this.handleClick}>Text</h1>
-            <a onClick={this.handleClick}>About</a>
-            <a onClick={this.handleClick}>Get Started</a>
-            <a onClick={this.handleClick}>Sign In</a>
-          </div>
-        </div>
-      </div>
+    <div className="row">
+           <i className="fa-solid fa-bars" onClick={this.handleNavBar}></i>
+   <div className={`modal ${this.handleHide()}`}>
+     <div className={`overlay ${this.handleHide()}`} onClick={this.handleNavBar}></div>
+  <h1 onClick={this.handleNavBar} className={this.handleHide}>Menu</h1>
+  <h4 href="#" onClick={this.handleNavBar} className={this.handleHide()}>About</h4>
+  <h4 href="#" onClick={this.handleNavBar} className={this.handleHide()}>Get started</h4>
+  <h4 href="#" onClick={this.handleNavBar} className={this.handleHide()}>Sign in</h4>
+   </div>
+</div>
     );
   }
-
 }
