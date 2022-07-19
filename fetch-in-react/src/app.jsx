@@ -19,7 +19,9 @@ class App extends React.Component {
           users: data,
           isLoading: false
         });
-      });
+      })
+      .catch(error => console.error(error));
+
   }
 
   render() {
