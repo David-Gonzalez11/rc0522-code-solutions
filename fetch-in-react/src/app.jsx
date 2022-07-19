@@ -13,7 +13,7 @@ class App extends React.Component {
   componentDidMount() {
     /* your code here */
     fetch('https://jsonplaceholder.typicode.com/users')
-      .then(res => res.json())
+      .then(response => response.json())
       .then(data => {
         this.setState({
           users: data,
