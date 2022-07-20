@@ -58,6 +58,7 @@ app.post('/api/auth/sign-in', (req, res, next) => {
   const value = [username];
   db.query(sql, value)
     .then(result => {
+      const rows = result.rows[0];
       if (result.rows.length === 0) {
         throw new ClientError(401, 'invalid login');
       }
@@ -67,8 +68,8 @@ app.post('/api/auth/sign-in', (req, res, next) => {
             throw new ClientError(401, 'invalid login');
           }
           const payload = {
-            userId: result.rows[0].userId,
-            username: result.rows[0].username
+            userId: rows.userId,
+            username: rows.username
           };
           const token = jwt.sign(payload, process.env.TOKEN_SECRET);
           res.status(201).json({
