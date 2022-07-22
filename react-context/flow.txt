@@ -1,0 +1,6 @@
+USER CAN SIGN In
+within the auth page component we want to check the path of the url
+if the path is equal to sign in then the text 'Pleae sign in to continue' would be displayed
+if the path is not sign in then the text will display Create an account to get started
+after we check these conditions then we return the user message with the classes and styles applied to the applied
+the handleSign in method is called and gets the token from localStorage and sets it equal to the user so that the server can verify that the user is verfied
