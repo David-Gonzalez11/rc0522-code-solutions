@@ -1,0 +1,33 @@
+USER CAN SIGN UP
+within the auth page component we want to check the path of the url so that it can show the sign Up page
+if the path is equal to sign in then the text 'Pleae sign in to continue' would be displayed and you would be able to enter  a password and username
+when the user enters a username and a password is it sent to the server and the server checks all conditions
+the passowrd is then hashed which is sent to the database
+the username and password are then store into a database
+
+
+
+
+USER CAN SIGN IN
+Once the user has signed up then the data (username and password) are stored in the database
+if the path is equal to sign up or Sign in the the <Auth />  componentwill be called
+this component will chech the rout path and if it is equal to signIn then the sign In page is displayed with the elcome message of Please sign in to continue
+once the correct message is display then the user can enter their sign in information
+this will fetch the data from the database and will check if the user data is valid
+if the data is valid by checking the usersToken then the user will be signed in
+we will then setState to the user
+
+
+
+
+USER CAN STAY SIGNED In
+when the user is logged in the token is verified so the user can stay logged in even the page is refeshed
+state is updated when the user refreshes so that the users token is always tied to that user
+
+
+USER CAN SIGN OUT
+
+when the user is logged in with the correct token then the user will see a sign out button
+when the sign out button is clicked then the handleSignout method gets called
+when this method gets called then the toekn is removed from localStorge and the users State is set to null
+when it is set to null then state gets updated to isAuthoriing false which means that the user is not signing in or creating an account so it displays the main page
