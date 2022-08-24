@@ -28,11 +28,7 @@ export default class Carousel extends React.Component {
   }
 
   rightClick() {
-    console.log('I am working');
-
     const currentImage = this.state.currentImage;
-    console.log('value of currentIMage', currentImage);
-
     if (currentImage === this.props.images.length - 1) {
       this.setState({ currentImage: 0 });
     } else {
