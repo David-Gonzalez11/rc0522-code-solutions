@@ -14,10 +14,8 @@ export default class Carousel extends React.Component {
   // }
 
   leftClick(event) {
-    console.log('I am working');
 
     const currentImage = this.state.currentImage;
-    console.log('value of currentIMage', currentImage);
     if (currentImage === 0) {
       this.setState({ currentImage: 4 });
     } else {

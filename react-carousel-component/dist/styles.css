@@ -28,7 +28,8 @@
   display: flex;
   justify-content: center;
   position: relative;
-  top: 15rem;
+  top: 12rem;
+  right: 4rem;
 }
 
 .column-middle {
