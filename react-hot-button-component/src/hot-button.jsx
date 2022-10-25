@@ -1,35 +1,28 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import './styles.css';
 
-class HotButton extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { count: 0 };
-    this.handleClick = this.handleClick.bind(this);
-  }
+export default function HotButton() {
+  const [count, setCount] = useState(0);
 
-  handleClick() {
-    this.setState({ count: this.state.count + 1 });
-  }
-
-  render() {
-    let btnClass = '';
-
-    if (this.state.count <= 3) {
-      btnClass = 'btn3';
-    } else if (this.state.count <= 6) {
-      btnClass = 'btn6';
-    } else if (this.state.count <= 9) {
-      btnClass = 'btn9';
-    } else if (this.state.count <= 12) {
-      btnClass = 'btn12';
-    } else if (this.state.count <= 15) {
-      btnClass = 'btn15';
-    } else if (this.state.count >= 16) {
-      btnClass = 'btn18';
-    }
-
-    return <button onClick={this.handleClick} className={`hot-button ${btnClass}`}>Hot-button!</button>;
-  }
+  const clicked =
+    count <= 3
+      ? 'btn3'
+      : count <= 6
+        ? 'btn6'
+        : count <= 9
+          ? 'btn9'
+          : count <= 12
+            ? 'btn12'
+            : count <= 15
+              ? 'btn15'
+              : 'btn18';
+  return (
+    <>
+      <h1>{count}</h1>
+      <button className={clicked} onClick={() => setCount(count + 1)}>
+        Click me
+      </button>
+    </>
+  );
 }
-export default HotButton;
