@@ -19,32 +19,32 @@ export default class App extends React.Component {
      * Then 😉, once the response JSON is received and parsed,
      * update state with the received todos.
      */
-    fetch('/api/todos')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({
-          todos: data
-        });
+    fetch('/api/todos').then(response =>
+      response.json()
+    ).then(data => {
+      this.setState({
+        todos: data
       });
+    });
 
   }
 
   addTodo(newTodo) {
-    fetch('/api/todos', {
+    fetch('api/todos', {
       method: 'POST',
-      headers: { 'content-type': 'application/json' },
+      headers: {
+        'content-type': 'application/json'
+      },
       body: JSON.stringify(newTodo)
-    }
-
-    )
+    })
       .then(response => response.json())
       .then(data => {
         const todosArray = this.state.todos.concat(data);
         this.setState({
           todos: todosArray
         });
-
       });
+
     /**
     * Use fetch to send a POST request to `/api/todos`.
     * Then 😉, once the response JSON is received and parsed,
