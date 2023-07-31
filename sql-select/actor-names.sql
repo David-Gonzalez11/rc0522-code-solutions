@@ -1,4 +1,4 @@
-select "actorId",
-       "firstName",
-       "lastName"
-       from "actors";
+SELECT "actorId",
+"firstName",
+"lastName"
+from "actors"
