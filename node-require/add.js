@@ -1,2 +1,4 @@
-const add = (x, y) => Number(x) + Number(y);
+const add = (x, y) => {
+  return Number(x) + Number(y);
+};
 module.exports = add;

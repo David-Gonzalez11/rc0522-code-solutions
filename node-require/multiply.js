@@ -1,2 +1,2 @@
-const multiply = (x, y) => Number(x) * Number(y);
-module.exports = multiply;
+const multiply = (e, f) => Number(e) * Number(f);
+module.exprts = multiply;
