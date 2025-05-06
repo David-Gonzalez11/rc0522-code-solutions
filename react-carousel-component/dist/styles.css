@@ -1,0 +1,55 @@
+.container {
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.column {
+  width: calc(100% / 3);
+}
+
+.fa-chevron-right {
+  position: relative;
+  top: 27rem;
+  left: 30rem;
+}
+
+.fa-angle-left {
+  display: flex;
+  position: absolute;
+  top: 30rem;
+  left: 4rem;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 12rem;
+  right: 4rem;
+}
+
+.column-middle {
+  position: absolute;
+  bottom: 25rem;
+  left: 24rem;
+  display: flex;
+  justify-content: center;
+  width: 53%;
+}
+
+.fa-circle {
+  margin-left: 1rem;
+  color: black;
+}
+
+.fa-solid {
+  color: black;
+}
+
+.circle-icon:visited {
+  font-size: 600px;
+}
