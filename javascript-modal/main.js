@@ -9,7 +9,7 @@ closeModal.addEventListener('click', handleClick);
 function handleClick(event) {
   if (event.target === showModal) {
     overlay.classList.remove('hidden');
-
+console.log(event)
   } else if (event.target === closeModal) {
     overlay.classList.add('hidden');
   }
