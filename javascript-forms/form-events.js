@@ -14,18 +14,18 @@ function handleInput(event) {
   console.log('Value of', event.target.name + ':', event.target.value);
 }
 
-var name = document.querySelector('#user-name');
+var userName = document.querySelector('#user-name');
 var email = document.querySelector('#user-email');
 var textarea = document.querySelector('#user-message');
 
-name.addEventListener('focus', handleFocus);
+userName.addEventListener('focus', handleFocus);
 email.addEventListener('focus', handleFocus);
 textarea.addEventListener('focus', handleFocus);
 
-name.addEventListener('blur', handleBlur);
+userName.addEventListener('blur', handleBlur);
 email.addEventListener('blur', handleBlur);
 textarea.addEventListener('blur', handleBlur);
 
-name.addEventListener('input', handleInput);
+userName.addEventListener('input', handleInput);
 email.addEventListener('input', handleInput);
 textarea.addEventListener('input', handleInput);
