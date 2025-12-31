@@ -21,18 +21,24 @@ const grades = {
   }
 };
 
-app.get('/api/grades', (req, res) => {
-  const newArray = [];
-  for (const x in grades) {
-    newArray.push(grades[x]);
-  }
-  res.json(newArray);
-});
 
-app.delete('/api/grades/:id', (req, res) => {
-  const id = req.params.id;
-  delete grades[id];
-  res.sendStatus(204);
-});
+
+app.get("/api/grades", (req,res) => {
+const newArray = [];
+for(const x in grades){
+  newArray.push(grades[x])
+}
+res.json(newArray);
+})
+
+
+app.delete("/api/grades/:id",( req,res) => {
+const idToDelete = req.params.id;
+delete grades[idToDelete];
+res.sendStatus(204);
+})
+
+
 app.listen(3000, () => {
+  console.log("app is listening on port 3000")
 });
