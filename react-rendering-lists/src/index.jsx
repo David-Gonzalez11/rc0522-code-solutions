@@ -8,21 +8,19 @@ const pokedex = [
   { number: '025', name: 'Pikachu' },
   { number: '039', name: 'Jigglypuff' }
 ];
-function PokemonList() {
-  const pokemonList = pokedex.map(pokemon => (
-  <li key={pokemon.number}>{pokemon.name}</li>
-  )
-  );
+function PokemonDeck() {
+  const pokemonDeck = pokedex.map(p =>
+    (<li key={p.number}>{p.name}</li>
+    ));
 
   return (
-  <ul>{pokemonList}</ul>
+  <ul>
+    {pokemonDeck}
+  </ul>
   );
 }
-const element = (
-  <PokemonList />
-);
-const container = document.querySelector('#root');
-const root =
-ReactDOM.createRoot(container);
+const element = <PokemonDeck />;
 
+const container = document.querySelector('#root');
+const root = ReactDOM.createRoot(container);
 root.render(element);
